@@ -7,15 +7,15 @@
 # Set zsh as shell and install ohmyzsh + install syntax highlighting
 
 # Apt update/upgraydd
-apt update
+sudo apt update
 
-apt upgrade -y
+sudo apt upgrade -y
 
-apt auto-remove
+sudo apt auto-remove
 
 # Install extras
 
-apt -q -y install python3-pip \
+sudo apt -q -y install python3-pip \
     tmux \
     zsh \
     curl \
@@ -27,3 +27,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Copy dotfiles 
 
 cp dotfiles/* /home/$USER/
+
+# switch to zsh
+
+chsh -s /bin/bash
