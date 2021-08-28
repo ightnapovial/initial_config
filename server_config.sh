@@ -26,7 +26,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Copy dotfiles 
 
-cp dotfiles/* /home/$USER/
+dfiles=".zshrc"
+
+for file in $dfiles; do
+	echo "Copying $file"
+	cp dotfiles/$file ~/
+done
+
+#cp dotfiles/* /home/$USER/
 
 # switch to zsh
 
