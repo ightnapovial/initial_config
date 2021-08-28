@@ -26,4 +26,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Copy dotfiles 
 
-#cp dotfiles/* /home/$USER
+cp dotfiles/* /home/$USER/
