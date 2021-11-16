@@ -38,4 +38,4 @@ done
 
 # switch to zsh
 
-chsh -s /bin/zsh
+chsh -s /usr/bin/zsh
