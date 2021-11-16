@@ -37,4 +37,4 @@ done
 
 # switch to zsh
 
-chsh -s /bin/bash
+chsh -s /bin/zsh
