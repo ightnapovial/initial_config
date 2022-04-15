@@ -21,7 +21,8 @@ sudo apt -q -y install python3-pip \
     curl \
     git \
     zsh-syntax-highlighting \
-    locate
+    locate \
+    micro
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
