@@ -11,7 +11,7 @@ sudo apt update
 
 sudo apt upgrade -y
 
-sudo apt auto-remove
+sudo apt auto-remove -y
 
 # Install extras
 
@@ -22,7 +22,8 @@ sudo apt -q -y install python3-pip \
     git \
     zsh-syntax-highlighting \
     locate \
-    micro
+    micro \
+    net-tools
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
