@@ -23,7 +23,8 @@ sudo apt -q -y install python3-pip \
     zsh-syntax-highlighting \
     locate \
     micro \
-    net-tools
+    net-tools \
+    cifs-utils
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
