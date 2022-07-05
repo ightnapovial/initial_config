@@ -24,7 +24,8 @@ sudo apt -q -y install python3-pip \
     locate \
     micro \
     net-tools \
-    cifs-utils
+    cifs-utils \
+    glances
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
