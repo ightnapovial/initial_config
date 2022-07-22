@@ -47,7 +47,9 @@ for file in $dfiles; do
 	cp dotfiles/$file ~/
 done
 
+# Copy sway config
 
+cp config/sway/config ~/.config/sway/
 
 # switch to zsh
 
