@@ -19,7 +19,7 @@ sudo apt -q -y install python3-pip \
     tmux \
     zsh \
     curl \
-    git \
+#    git \
     zsh-syntax-highlighting \
     locate \
     micro \
