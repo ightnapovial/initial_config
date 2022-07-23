@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Tasks:
-# apt update and upgraydd
+# copy and install powerlevel fonts
 # Copy sway config
 # Install pipewire and associated items, copy sway config
 # Set zsh as shell and install ohmyzsh + install syntax highlighting
@@ -19,7 +19,6 @@ sudo apt -q -y install python3-pip \
     tmux \
     zsh \
     curl \
-#    git \
     zsh-syntax-highlighting \
     locate \
     micro \
@@ -30,10 +29,10 @@ sudo apt -q -y install python3-pip \
     pipewire-pulse \
     wireplumber \
     waybar \
-    network-manager-gnome
-    cool-retro-term
+    network-manager-gnome \
+    cool-retro-term \
     nmap \
-    ranger \
+    ranger
     
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -49,7 +48,7 @@ done
 
 # Copy sway config
 
-cp config/sway/config ~/.config/sway/
+mkdir ~/.config/sway && cp config/sway/config ~/.config/sway/
 
 # switch to zsh
 

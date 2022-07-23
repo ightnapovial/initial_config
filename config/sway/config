@@ -23,6 +23,13 @@ set $menu krunner
 
 include /etc/sway/config-vars.d/*
 
+# Disable mouseover focus
+focus_follows_mouse no
+
+# Fix for slow GTK applications
+#exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec systemctl --user import-environment
+
 # Autostart network
 exec --no-startup-id nm-applet
 
@@ -30,7 +37,7 @@ exec --no-startup-id nm-applet
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/daytoner-daniel-hahn-nakatomi-iii-small.jpg fill
 
 # Display settings (rotation, scaling)
 output DSI-1 transform 90
@@ -229,16 +236,21 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-    swaybar_command waybar
+#    swaybar_command swaybar
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
+    colors {
+        statusline #84c60d
+	focused_statusline #84c60d
+	focused_workspace #84c60d #000000 #84c60d
+        background #07060C
+        inactive_workspace #32323200 #32323200 #48494B
     }
 }
 
 include /etc/sway/config.d/*
+
+# Window border config
+default_border none
