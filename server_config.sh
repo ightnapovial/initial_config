@@ -19,7 +19,6 @@ sudo apt -q -y install python3-pip \
     tmux \
     zsh \
     curl \
-    git \
     zsh-syntax-highlighting \
     locate \
     micro \
@@ -43,3 +42,7 @@ done
 # switch to zsh
 
 chsh -s /usr/bin/zsh
+
+# Install powerlevel10k
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
