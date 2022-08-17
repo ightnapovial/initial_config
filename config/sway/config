@@ -37,11 +37,11 @@ exec --no-startup-id nm-applet
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/daytoner-daniel-hahn-nakatomi-iii-small.jpg fill
+#output * bg ~/Pictures/daytoner-daniel-hahn-nakatomi-iii-small.jpg fill
 
 # Display settings (rotation, scaling)
-output DSI-1 transform 90
-output DSI-1 scale 1.25
+#output DSI-1 transform 90
+#output DSI-1 scale 1.25
 
 #
 # Example configuration:
@@ -82,8 +82,9 @@ output DSI-1 scale 1.25
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+KP_Enter exec cool-retro-term
-
+    #bindsym $mod+KP_Enter exec cool-retro-term
+    bindsym $mod+Return exec cool-retro-term
+    
     # Kill focused window
     bindsym $mod+Shift+q kill
 
@@ -104,8 +105,8 @@ output DSI-1 scale 1.25
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Screen brightness
-    bindsym XF86MonBrightnessUp exec --no-startup-id /home/chris/.config/i3/backlight.sh -inc 50
-    bindsym XF86MonBrightnessDown exec --no-startup-id /home/chris/.config/i3/backlight.sh -dec 50
+    #bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/backlight.sh -inc 50
+    #bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/backlight.sh -dec 50
 
     # Volume control
 #    bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up

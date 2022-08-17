@@ -46,12 +46,18 @@ for file in $dfiles; do
 	cp dotfiles/$file ~/
 done
 
-# Copy sway config
+# Copy sway config and backlight script
 
 mkdir ~/.config/sway && cp config/sway/config ~/.config/sway/
+
+cp config/sway/config/backlight.sh ~/.config/sway/
 
 # switch to zsh
 
 chsh -s /usr/bin/zsh
+
+# add powerlevel fonts
+
+mkdir ~/.fonts && cp font/* ~/.fonts
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
